@@ -1,5 +1,11 @@
 package ch02;
 
+/**
+ * 
+ * @author admin
+ *
+ */
+
 public class VarEx07 {
 
 	public static void main(String[] args) {

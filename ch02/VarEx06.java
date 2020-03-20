@@ -2,7 +2,7 @@ package ch02;
 
 class person{
 	String name = "000";
-	int age = 29;
+	int age = 20;
 	char gender = '¿©';
 	String email ="abc@gmail.com";
 	String phone ="010-0000-0000";
