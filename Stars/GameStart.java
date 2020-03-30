@@ -1,7 +1,15 @@
 package Stars;
 
+abstract class Protoss {
+	abstract String getName();
+	abstract int getHp();
+	abstract void setHp(int hp);
+	abstract int getAttack();
+	abstract void setAttack(int attack);
+}
+
 //다크템플러 DarkTempler(50), 리버 River(70)
-class DarkTempler {
+class DarkTempler extends Protoss {
 	final String NAME;
 	int hp;
 	static int attack = 50;
@@ -10,9 +18,34 @@ class DarkTempler {
 		this.NAME = name;
 		this.hp = 100;
 	}
+
+	@Override
+	String getName() {
+		return NAME;
+	}
+
+	@Override
+	int getHp() {
+		return hp;
+	}
+
+	@Override
+	void setHp(int hp) {
+		
+	}
+
+	@Override
+	int getAttack() {
+		return attack;
+	}
+
+	@Override
+	void setAttack(int attack) {
+		
+	}
 }
 
-class River {
+class River extends Protoss {
 	final String NAME;
 	int hp;
 	static int attack = 70;
@@ -21,10 +54,34 @@ class River {
 		this.NAME = name;
 		this.hp = 100;
 	}
+
+	@Override
+	String getName() {
+		return NAME;
+	}
+
+	@Override
+	int getHp() {
+		return hp;
+	}
+
+	@Override
+	void setHp(int hp) {
+		
+	}
+
+	@Override
+	int getAttack() {
+		return attack;
+	}
+
+	@Override
+	void setAttack(int attack) {		
+	}
 }
 
 
-class Zealot {
+class Zealot extends Protoss {
 	final String NAME;
 	int hp;
 	static int attack = 10;
@@ -33,9 +90,34 @@ class Zealot {
 		this.NAME = name;
 		this.hp = 100;
 	}
+
+	@Override
+	String getName() {
+		return NAME;
+	}
+
+	@Override
+	int getHp() {
+		return hp;
+	}
+
+	@Override
+	void setHp(int hp) {
+		
+	}
+
+	@Override
+	int getAttack() {
+		return attack;
+	}
+
+	@Override
+	void setAttack(int attack) {
+		
+	}
 }
 
-class Dragoon {
+class Dragoon extends Protoss {
 	final String NAME;
 	int hp;
 	static int attack = 15;
@@ -44,13 +126,38 @@ class Dragoon {
 		this.NAME = name;
 		this.hp = 100;
 	}
+
+	@Override
+	String getName() {
+		return NAME;
+	}
+
+	@Override
+	int getHp() {
+		return hp;
+	}
+
+	@Override
+	void setHp(int hp) {
+		
+	}
+
+	@Override
+	int getAttack() {
+		return attack;
+	}
+
+	@Override
+	void setAttack(int attack) {
+		
+	}
 }
 
 public class GameStart {
 	
 	//질럿 => 드라군 때릴거임!
 	static void attack(Zealot u1, Dragoon u2) {
-		u2.hp = u2.hp - u1.attack;
+		u2.setHp(u2.hp = u2.hp - u1.getAttack());
 		System.out.println(u2.NAME + "이 공격당하고 있습니다.");
 		System.out.println(u2.NAME + "의 체력은 " + u2.hp + "입니다.");
 	}

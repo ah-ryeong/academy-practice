@@ -31,10 +31,10 @@ public class PersonApp {
 		System.out.println(p3.bloodType);
 		
 		Person p4 = new Person(
-				"차아령",
+				"홍길동",
 				"학생",
-				29,
-				'여',
+				35,
+				'남',
 				"A"
 		);
 		
