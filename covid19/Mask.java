@@ -91,7 +91,6 @@ public class Mask {
 				System.out.println(pr.get(i).getAddr());
 			}
 		}
-		System.out.println(getMaskInfo(0).getStoreInfos());
 	}
 
 }
